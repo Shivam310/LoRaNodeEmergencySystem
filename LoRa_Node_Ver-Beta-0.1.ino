@@ -68,7 +68,8 @@ void loop() {
     Serial.println(counter);
     // send packet
     LoRa.beginPacket();
-    LoRa.print("hello ");
+    LoRa.print(gps.lat);
+    LoRa.print(gps.lng)
     LoRa.print(counter);
     LoRa.endPacket();
     counter++;
